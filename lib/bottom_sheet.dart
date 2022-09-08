@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+/// ボトムシートの土台となるウィジェット
 class CustomBottomSheet extends StatelessWidget {
   const CustomBottomSheet({
     super.key,
@@ -11,8 +12,8 @@ class CustomBottomSheet extends StatelessWidget {
   final Widget body;
 
   static const cornerRadius = 20.0;
-  static Color maskColor = Colors.white.withOpacity(0.5);
-  static ImageFilter filter = ImageFilter.blur(sigmaX: 10, sigmaY: 10);
+  static Color maskColor = Colors.black45.withOpacity(0.5);
+  static ImageFilter filter = ImageFilter.blur(sigmaX: 20, sigmaY: 20);
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ class CustomBottomSheet extends StatelessWidget {
   }
 }
 
+/// シート上部に設置したドラッグインジケーター
 class _DragIndicator extends StatelessWidget {
   const _DragIndicator({super.key});
 
